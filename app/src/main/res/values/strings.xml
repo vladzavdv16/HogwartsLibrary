@@ -3,4 +3,11 @@
     <string name="title_home">Home</string>
     <string name="title_dashboard">Dashboard</string>
     <string name="title_notifications">Notifications</string>
+    <string name="welcome_title">Добро пожаловать в школу магии и волшебства - Хогвартс</string>
+    <string name="welcome_subtitle">Наденьте распределительную шляпу</string>
+    <string name="welcome_name_hint">Имя и фамилия</string>
+    <string name="welcome_select_faculty">Распределить</string>
+    <string name="welcome_selected">Поздравляем ваш факультет [faculty_name]</string>
+    <string name="welcome_selecting">Распределяю…</string>
+    <string name="welcome_next">Зайти в школу</string>
 </resources>
