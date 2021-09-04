@@ -7,9 +7,9 @@
 
     <fragment
         android:id="@+id/navigation_home"
-        android:name="com.light.hogwartslibrary.ui.scenes.home.HomeFragment"
-        android:label="@string/title_home"
-        tools:layout="@layout/fragment_home" />
+        android:name="com.light.hogwartslibrary.ui.scenes.student.StudentFragment"
+        android:label="@string/title_students"
+        tools:layout="@layout/fragment_student" />
 
     <fragment
         android:id="@+id/navigation_dashboard"
