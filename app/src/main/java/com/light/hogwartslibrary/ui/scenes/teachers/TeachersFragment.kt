@@ -1,9 +1,8 @@
-package com.light.hogwartslibrary.ui.scenes.student
+package com.light.hogwartslibrary.ui.scenes.teachers
 
 import android.os.Bundle
 import android.text.Editable
 import android.text.TextWatcher
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -11,14 +10,14 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.light.hogwartslibrary.databinding.FragmentStudentBinding
-import com.light.hogwartslibrary.ui.scenes.student.adapter.StudentAdapter
+import com.light.hogwartslibrary.databinding.FragmentTeachersBinding
+import com.light.hogwartslibrary.ui.scenes.teachers.adapter.TeachersAdapter
 
-class StudentFragment : Fragment() {
+class TeachersFragment : Fragment() {
 
-    private lateinit var studentViewModel: StudentViewModel
-    private var _binding: FragmentStudentBinding? = null
-    private lateinit var adapter: StudentAdapter
+    private lateinit var teachersViewModel: TeachersViewModel
+    private var _binding: FragmentTeachersBinding? = null
+    private lateinit var adapter: TeachersAdapter
 
     // This property is only valid between onCreateView and
     // onDestroyView.
@@ -27,7 +26,7 @@ class StudentFragment : Fragment() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        adapter = StudentAdapter()
+        adapter = TeachersAdapter()
     }
 
     override fun onCreateView(
@@ -35,10 +34,10 @@ class StudentFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        studentViewModel =
-            ViewModelProvider(this).get(StudentViewModel::class.java)
+        teachersViewModel =
+            ViewModelProvider(this).get(TeachersViewModel::class.java)
 
-        _binding = FragmentStudentBinding.inflate(inflater, container, false)
+        _binding = FragmentTeachersBinding.inflate(inflater, container, false)
         val root: View = binding.root
 
         return root
@@ -51,12 +50,12 @@ class StudentFragment : Fragment() {
         setupLoading()
 
         context.let {
-            binding.recyclerStudents.adapter = adapter
-            binding.recyclerStudents.layoutManager =
+            binding.recyclerTeachers.adapter = adapter
+            binding.recyclerTeachers.layoutManager =
                 LinearLayoutManager(it, LinearLayoutManager.VERTICAL, false)
         }
 
-        studentViewModel.fetchStudents()
+        teachersViewModel.fetchStudents()
 
         binding.textStudentSearch.addTextChangedListener(object : TextWatcher {
             override fun beforeTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {
@@ -76,7 +75,7 @@ class StudentFragment : Fragment() {
     }
 
     private fun setupLoading() {
-        studentViewModel.isLoading.observe(viewLifecycleOwner, Observer {
+        teachersViewModel.isLoading.observe(viewLifecycleOwner, Observer {
             binding.txtStudentLoading.visibility = if (it) {
                 View.VISIBLE
             } else {
@@ -92,7 +91,7 @@ class StudentFragment : Fragment() {
     }
 
     private fun setupData() {
-        studentViewModel.studentsCell.observe(viewLifecycleOwner, Observer {
+        teachersViewModel.teachersCell.observe(viewLifecycleOwner, Observer {
             if (it.isNotEmpty()) {
                 adapter.setData(newData = it)
             }

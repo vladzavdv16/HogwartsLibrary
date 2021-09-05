@@ -1,20 +1,20 @@
-package com.light.hogwartslibrary.ui.scenes.student
+package com.light.hogwartslibrary.ui.scenes.teachers
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.light.hogwartslibrary.domain.repository.StudentRepositoryImpl
-import com.light.hogwartslibrary.ui.scenes.student.adapter.StudentsCellModel
+import com.light.hogwartslibrary.ui.scenes.teachers.adapter.TeachersCellModel
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 
-class StudentViewModel : ViewModel() {
+class TeachersViewModel : ViewModel() {
 
     private val repository = StudentRepositoryImpl()
 
-    private val _students = MutableLiveData<List<StudentsCellModel>>().apply {
+    private val _students = MutableLiveData<List<TeachersCellModel>>().apply {
         value = ArrayList()
     }
 
@@ -22,7 +22,7 @@ class StudentViewModel : ViewModel() {
         value = false
     }
 
-    val studentsCell: LiveData<List<StudentsCellModel>> = _students
+    val teachersCell: LiveData<List<TeachersCellModel>> = _students
     val isLoading: LiveData<Boolean> = _isLoading
 
 
@@ -33,7 +33,7 @@ class StudentViewModel : ViewModel() {
                 val students = repository.fetchStudent()
                 _isLoading.postValue(false)
                 _students.postValue(students.map {
-                    StudentsCellModel(
+                    TeachersCellModel(
                         id = it.id,
                         name = "${it.name} ${it.secondName}",
                         facultyName = it.facultyName

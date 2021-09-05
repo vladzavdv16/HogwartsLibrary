@@ -7,19 +7,33 @@
 
     <fragment
         android:id="@+id/navigation_home"
-        android:name="com.light.hogwartslibrary.ui.scenes.student.StudentFragment"
+        android:name="com.light.hogwartslibrary.ui.scenes.teachers.TeachersFragment"
         android:label="@string/title_students"
-        tools:layout="@layout/fragment_student" />
+        tools:layout="@layout/fragment_teachers" />
 
     <fragment
         android:id="@+id/navigation_dashboard"
-        android:name="com.light.hogwartslibrary.ui.scenes.dashboard.DashboardFragment"
-        android:label="@string/title_dashboard"
-        tools:layout="@layout/fragment_dashboard" />
+        android:name="com.light.hogwartslibrary.ui.scenes.houses.HousesFragment"
+        android:label="@string/title_houses"
+        tools:layout="@layout/fragment_houses" >
+        <action
+            android:id="@+id/action_navigation_dashboard_to_houseDetailFragment"
+            app:destination="@id/houseDetailFragment" />
+    </fragment>
 
     <fragment
         android:id="@+id/navigation_notifications"
-        android:name="com.light.hogwartslibrary.ui.scenes.notifications.NotificationsFragment"
+        android:name="com.light.hogwartslibrary.ui.scenes.students.StudentsFragment"
         android:label="@string/title_notifications"
-        tools:layout="@layout/fragment_notifications" />
+        tools:layout="@layout/fragment_students" />
+    <fragment
+        android:id="@+id/houseDetailFragment"
+        android:name="com.light.hogwartslibrary.ui.scenes.house.HouseDetailFragment"
+        android:label="house_detail_fragment"
+        tools:layout="@layout/house_detail_fragment" >
+        <argument
+            android:name="House"
+            app:argType="com.light.hogwartslibrary.ui.scenes.house.Houses"
+            android:defaultValue="Griffindor" />
+    </fragment>
 </navigation>

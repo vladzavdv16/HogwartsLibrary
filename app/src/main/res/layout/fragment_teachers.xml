@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".ui.scenes.student.StudentFragment">
+    tools:context=".ui.scenes.teachers.TeachersFragment">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -21,7 +21,7 @@
             android:padding="16dp" />
 
         <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/recycler_students"
+            android:id="@+id/recycler_teachers"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             tools:listitem="@layout/cell_student" />

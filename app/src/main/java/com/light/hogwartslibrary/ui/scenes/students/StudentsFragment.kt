@@ -1,4 +1,4 @@
-package com.light.hogwartslibrary.ui.scenes.notifications
+package com.light.hogwartslibrary.ui.scenes.students
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -10,9 +10,9 @@ import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import com.light.hogwartslibrary.databinding.FragmentNotificationsBinding
 
-class NotificationsFragment : Fragment() {
+class StudentsFragment : Fragment() {
 
-    private lateinit var notificationsViewModel: NotificationsViewModel
+    private lateinit var studentsViewModel: StudentsViewModel
     private var _binding: FragmentNotificationsBinding? = null
 
     // This property is only valid between onCreateView and
@@ -24,14 +24,14 @@ class NotificationsFragment : Fragment() {
             container: ViewGroup?,
             savedInstanceState: Bundle?
     ): View {
-        notificationsViewModel =
-                ViewModelProvider(this).get(NotificationsViewModel::class.java)
+        studentsViewModel =
+                ViewModelProvider(this).get(StudentsViewModel::class.java)
 
         _binding = FragmentNotificationsBinding.inflate(inflater, container, false)
         val root: View = binding.root
 
         val textView: TextView = binding.textNotifications
-        notificationsViewModel.text.observe(viewLifecycleOwner, Observer {
+        studentsViewModel.text.observe(viewLifecycleOwner, Observer {
             textView.text = it
         })
         return root

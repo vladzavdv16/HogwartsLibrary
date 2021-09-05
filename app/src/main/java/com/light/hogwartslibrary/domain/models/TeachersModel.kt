@@ -1,6 +1,6 @@
 package com.light.hogwartslibrary.domain.models
 
-data class StudentModel(
+data class TeachersModel(
     val id: Int,
     val name: String,
     val secondName: String,
