@@ -3,7 +3,7 @@ package com.light.hogwartslibrary.ui.scenes.teachers.adapter
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.light.hogwartslibrary.databinding.CellStudentBinding
+import com.light.hogwartslibrary.databinding.CellHumanBinding
 
 class TeachersAdapter : RecyclerView.Adapter<TeachersAdapter.ViewHolder>() {
 
@@ -33,7 +33,7 @@ class TeachersAdapter : RecyclerView.Adapter<TeachersAdapter.ViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val inflater = LayoutInflater.from(parent.context)
-        return ViewHolder(CellStudentBinding.inflate(inflater, parent, false))
+        return ViewHolder(CellHumanBinding.inflate(inflater, parent, false))
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
@@ -42,7 +42,7 @@ class TeachersAdapter : RecyclerView.Adapter<TeachersAdapter.ViewHolder>() {
 
     override fun getItemCount(): Int = mDisplaylist.count()
 
-    class ViewHolder(val binding: CellStudentBinding) : RecyclerView.ViewHolder(binding.root) {
+    class ViewHolder(val binding: CellHumanBinding) : RecyclerView.ViewHolder(binding.root) {
 
         fun bind(cellModel: TeachersCellModel) {
             binding.txtStudentName.text = cellModel.name

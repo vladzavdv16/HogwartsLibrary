@@ -3,7 +3,7 @@ package com.light.hogwartslibrary.domain.repository
 import com.light.hogwartslibrary.domain.models.TeachersModel
 import kotlinx.coroutines.delay
 
-class StudentRepositoryImpl : StudentRepository {
+class TeachersRepositoryImpl : TeachersRepository {
     override suspend fun fetchStudent(): List<TeachersModel> {
         delay(2000)
         return listOf(

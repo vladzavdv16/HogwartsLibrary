@@ -4,7 +4,7 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.light.hogwartslibrary.domain.repository.StudentRepositoryImpl
+import com.light.hogwartslibrary.domain.repository.TeachersRepositoryImpl
 import com.light.hogwartslibrary.ui.scenes.teachers.adapter.TeachersCellModel
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
@@ -12,7 +12,7 @@ import kotlinx.coroutines.withContext
 
 class TeachersViewModel : ViewModel() {
 
-    private val repository = StudentRepositoryImpl()
+    private val repository = TeachersRepositoryImpl()
 
     private val _students = MutableLiveData<List<TeachersCellModel>>().apply {
         value = ArrayList()

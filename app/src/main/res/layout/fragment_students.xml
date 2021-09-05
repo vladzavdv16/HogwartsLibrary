@@ -13,28 +13,44 @@
         android:padding="16dp">
 
         <Button
+            android:id="@+id/btn_griffindor"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginEnd="8dp"
-            android:layout_weight="1" />
+            android:layout_weight="1"
+            android:background="@drawable/selectable_btn"
+            android:text="@string/students_griffindor"
+            android:textAllCaps="false" />
 
         <Button
+            android:id="@+id/btn_hufflepuff"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginEnd="8dp"
-            android:layout_weight="1" />
+            android:layout_weight="1"
+            android:background="@drawable/selectable_btn"
+            android:text="@string/students_hufflepuff"
+            android:textAllCaps="false" />
 
         <Button
+            android:id="@+id/btn_ravenclaw"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginEnd="8dp"
-            android:layout_weight="1" />
+            android:layout_weight="1"
+            android:background="@drawable/selectable_btn"
+            android:text="@string/students_ravenclaw"
+            android:textAllCaps="false" />
 
         <Button
+            android:id="@+id/btn_slytherin"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginEnd="8dp"
-            android:layout_weight="1" />
+            android:layout_weight="1"
+            android:background="@drawable/selectable_btn"
+            android:text="@string/students_slytherin"
+            android:textAllCaps="false" />
 
     </LinearLayout>
 

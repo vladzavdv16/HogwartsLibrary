@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.light.hogwartslibrary">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="false"
         android:icon="@mipmap/ic_launcher"
@@ -20,7 +22,7 @@
         </activity>
         <activity
             android:name=".ui.scenes.hat.HatActivity"
-            android:exported="true"/>
+            android:exported="true" />
         <activity
             android:name=".ui.scenes.main.MainActivity"
             android:exported="true"
