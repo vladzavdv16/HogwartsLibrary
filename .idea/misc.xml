@@ -4,12 +4,18 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/home/AndroidStudioProjects/HogwartsLibrary/app/src/main/res/drawable/main_button_background.xml" value="0.2703125" />
+        <entry key="..\:/Users/home/AndroidStudioProjects/HogwartsLibrary/app/src/main/res/drawable/selectable_btn.xml" value="0.2703125" />
         <entry key="..\:/Users/home/AndroidStudioProjects/HogwartsLibrary/app/src/main/res/layout/activity_hat.xml" value="0.2" />
         <entry key="..\:/Users/home/AndroidStudioProjects/HogwartsLibrary/app/src/main/res/layout/activity_main.xml" value="0.20244565217391305" />
         <entry key="..\:/Users/home/AndroidStudioProjects/HogwartsLibrary/app/src/main/res/layout/activity_splash.xml" value="0.23007246376811594" />
         <entry key="..\:/Users/home/AndroidStudioProjects/HogwartsLibrary/app/src/main/res/layout/cell_student.xml" value="0.264" />
+        <entry key="..\:/Users/home/AndroidStudioProjects/HogwartsLibrary/app/src/main/res/layout/fragment_dashboard.xml" value="0.23007246376811594" />
+        <entry key="..\:/Users/home/AndroidStudioProjects/HogwartsLibrary/app/src/main/res/layout/fragment_houses.xml" value="0.23641304347826086" />
         <entry key="..\:/Users/home/AndroidStudioProjects/HogwartsLibrary/app/src/main/res/layout/fragment_notifications.xml" value="0.20244565217391305" />
         <entry key="..\:/Users/home/AndroidStudioProjects/HogwartsLibrary/app/src/main/res/layout/fragment_student.xml" value="0.24365942028985507" />
+        <entry key="..\:/Users/home/AndroidStudioProjects/HogwartsLibrary/app/src/main/res/layout/fragment_students.xml" value="0.2318840579710145" />
+        <entry key="..\:/Users/home/AndroidStudioProjects/HogwartsLibrary/app/src/main/res/layout/fragment_teachers.xml" value="0.2318840579710145" />
+        <entry key="..\:/Users/home/AndroidStudioProjects/HogwartsLibrary/app/src/main/res/layout/house_detail_fragment.xml" value="0.2" />
         <entry key="..\:/Users/home/AndroidStudioProjects/HogwartsLibrary/app/src/main/res/menu/bottom_nav_menu.xml" value="0.25416666666666665" />
       </map>
     </option>

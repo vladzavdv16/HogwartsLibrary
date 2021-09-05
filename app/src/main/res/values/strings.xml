@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">HogwartsLibrary</string>
-    <string name="title_students">Ученики</string>
-    <string name="title_dashboard">Dashboard</string>
+    <string name="title_students">Students</string>
+    <string name="title_houses">Houses</string>
     <string name="title_notifications">Notifications</string>
     <string name="welcome_title">Добро пожаловать в школу магии и волшебства - Хогвартс</string>
     <string name="welcome_subtitle">Наденьте распределительную шляпу</string>
@@ -12,4 +12,6 @@
     <string name="welcome_next">Зайти в школу</string>
     <string name="student_search_hint">Введите имя для поиска</string>
     <string name="loading">Загружаю данные …</string>
+    <string name="house_detail_leader">The leadership of: [LEADER_NAME]</string>
+    <string name="house_detail_owner">Founded by: [FOUNDER_NAME]</string>
 </resources>

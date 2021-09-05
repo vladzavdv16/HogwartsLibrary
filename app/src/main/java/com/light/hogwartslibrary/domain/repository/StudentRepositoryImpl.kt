@@ -1,15 +1,15 @@
 package com.light.hogwartslibrary.domain.repository
 
-import com.light.hogwartslibrary.domain.models.StudentModel
+import com.light.hogwartslibrary.domain.models.TeachersModel
 import kotlinx.coroutines.delay
 
 class StudentRepositoryImpl : StudentRepository {
-    override suspend fun fetchStudent(): List<StudentModel> {
+    override suspend fun fetchStudent(): List<TeachersModel> {
         delay(2000)
         return listOf(
-            StudentModel(id = 0, name = "Harry", secondName = "Potter", facultyName = "Griffindor"),
-            StudentModel(id = 0, name = "Ronald", secondName = "Whisley", facultyName = "Griffindor"),
-            StudentModel(id = 0, name = "Drako", secondName = "Malfoy", facultyName = "Slytherin"),
-            StudentModel(id = 0, name = "Sedric", secondName = "Diggori", facultyName = "Ravenclaw"))
+            TeachersModel(id = 0, name = "Harry", secondName = "Potter", facultyName = "Griffindor"),
+            TeachersModel(id = 0, name = "Ronald", secondName = "Whisley", facultyName = "Griffindor"),
+            TeachersModel(id = 0, name = "Drako", secondName = "Malfoy", facultyName = "Slytherin"),
+            TeachersModel(id = 0, name = "Sedric", secondName = "Diggori", facultyName = "Ravenclaw"))
     }
 }

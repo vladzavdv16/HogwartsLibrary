@@ -1,18 +1,16 @@
-package com.light.hogwartslibrary.ui.scenes.student.adapter
+package com.light.hogwartslibrary.ui.scenes.teachers.adapter
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
-import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
 import com.light.hogwartslibrary.databinding.CellStudentBinding
-import kotlin.coroutines.coroutineContext
 
-class StudentAdapter : RecyclerView.Adapter<StudentAdapter.ViewHolder>() {
+class TeachersAdapter : RecyclerView.Adapter<TeachersAdapter.ViewHolder>() {
 
-    private val mDataList = ArrayList<StudentsCellModel>()
-    private val mDisplaylist = ArrayList<StudentsCellModel>()
+    private val mDataList = ArrayList<TeachersCellModel>()
+    private val mDisplaylist = ArrayList<TeachersCellModel>()
 
-    fun setData(newData: List<StudentsCellModel>) {
+    fun setData(newData: List<TeachersCellModel>) {
         mDataList.clear()
         mDataList.addAll(newData)
         filter(query = "")
@@ -46,7 +44,7 @@ class StudentAdapter : RecyclerView.Adapter<StudentAdapter.ViewHolder>() {
 
     class ViewHolder(val binding: CellStudentBinding) : RecyclerView.ViewHolder(binding.root) {
 
-        fun bind(cellModel: StudentsCellModel) {
+        fun bind(cellModel: TeachersCellModel) {
             binding.txtStudentName.text = cellModel.name
             binding.txtStudentFaculty.text = cellModel.facultyName
         }
