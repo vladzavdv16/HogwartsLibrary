@@ -48,6 +48,5 @@ class TeachersAdapter : RecyclerView.Adapter<TeachersAdapter.ViewHolder>() {
             binding.txtStudentName.text = cellModel.name
             binding.txtStudentFaculty.text = cellModel.facultyName
         }
-
     }
 }

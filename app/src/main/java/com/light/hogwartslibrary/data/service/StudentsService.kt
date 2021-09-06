@@ -3,8 +3,8 @@ package com.light.hogwartslibrary.data.service
 import com.light.hogwartslibrary.data.models.CharacterRemote
 import retrofit2.http.GET
 
-interface CharactersService {
+interface StudentsService {
 
-    @GET("api/characters/staff")
-    suspend fun getAllCharacters(): List<CharacterRemote>
+    @GET("api/characters/students")
+    suspend fun getAllStudents(): List<CharacterRemote>
 }

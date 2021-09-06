@@ -45,7 +45,7 @@ class StudentsFragment : Fragment() {
         binding.btnGriffindor.setOnClickListener {
             binding.btnGriffindor.isSelected = !binding.btnGriffindor.isSelected
             studentsViewModel.pressFilter(
-                faculty = "Griffindor",
+                faculty = "Gryffindor",
                 isSelected = binding.btnGriffindor.isSelected
             )
         }
